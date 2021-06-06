@@ -1,0 +1,8 @@
+<div class="drink">
+<p><%= tweet.drink %></p>
+<img class="drink-img" alt="img" src="<%= tweet.image %>" width="150" height="150"/>
+<div class="content-text">
+<p><%= tweet.name %></p>
+<h1><%= link_to '詳細', tweet_path(tweet.id), method: :get %></h1>
+</div>
+</div>

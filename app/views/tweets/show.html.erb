@@ -1,0 +1,22 @@
+<div class="contents"> 
+  <div class="drink">
+    <div class="make-text">
+    <img class="drink-img" alt="img" src="<%= @tweet.image %>" width="150" height="150"/>
+    <div class="more">
+    <p>ベースのお酒：<%= @tweet.base %></p>
+    <p>ドリンク名：<%= @tweet.drink %></p>
+    <p>投稿者：<%= @tweet.name %></p>
+    <p>作り方：<%= @tweet.text %></p>
+      <ul class="more_list">
+        <li>
+          <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
+        </li>
+        <li>
+          <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+        </li>
+      </ul>
+     </div>
+     </div>
+  </div>
+  </div>
+</div>

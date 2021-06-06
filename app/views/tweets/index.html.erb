@@ -1,0 +1,169 @@
+
+<div class="contents">
+  <div class="make">
+  <img class="concept-img" alt="img" src="/img/画像/カクテル3.jpeg"  height="300px" width="500px"/>
+  <div class="content">
+    <div class="title">
+    <p>How to make</p>
+    <h1>作り方</h1>
+    </div>
+    <div class="text">
+    <p>step1:ベースのお酒を選択</p>
+    <p>step2:気になるお酒を選択</p>
+    <p>step3:レシピを確認</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <div class="contents">
+    <div class="base">
+    <div class="content">
+      <div class="title">
+      <p>base</p>
+      <h1>お酒のベースを選択</h1>
+      </div>
+      </div>
+        <div class="new-post">
+          <a class="post" href="/tweets/new">オリジナルカクテルを投稿する</a>
+      </div>
+    </div>
+
+   <div class="drinks">
+      <div class="drink">
+          <a href="#whisky"><img class="drink-img" alt="img" src="https://images-na.ssl-images-amazon.com/images/I/818Y--zXy6L._AC_SX466_.jpg" width="150"/></a>
+         <div class="title2">
+          <p>WHISKY</p>
+          <h1>ウイスキー</h1>
+          </div>
+      </div>
+      <div class="drink">
+        <a href=""><img class="drink-img" alt="img" src="https://images-na.ssl-images-amazon.com/images/I/71TYreBkbZL._AC_SX679_.jpg" width="150" /></a>
+         <div class="title2">
+      <p id="menu">GIN</p>
+      <h1>ジン</h1>
+      </div>
+        <div class="show"><a href="#">詳細をみる</a></div>
+        </div>
+      <div class="drink">
+        <a href=""><img class="drink-img" alt="img" src="https://images-na.ssl-images-amazon.com/images/I/617D1r3m6wL._AC_SX679_.jpg" width="150" /></a>
+         <div class="title2">
+      <p id="menu">RUM</p>
+      <h1>ラム</h1>
+      </div>
+        <div class="show"><a href="#">詳細をみる</a></div>
+        </div>
+      <div class="drink">
+        <a href=""><img class="drink-img" alt="img" src="https://images-na.ssl-images-amazon.com/images/I/61la0Xvjo3L._AC_SX679_.jpg" width="150" /></a>
+         <div class="title2">
+      <p id="menu">VODKA</p>
+      <h1>ウォッカ</h1>
+      </div>
+        <div class="show"><a href="#">詳細をみる</a></div>
+        </div>
+
+
+  <div class="content">
+    <div class="title">
+    <p id="menu">News</p>
+    <h1>店長おすすめカクテル</h1>
+    </div>
+  </div>
+
+    <div class="drinks">
+    <% @tweets.each do |tweet| %>
+    <div class="drink">
+    <p><%= tweet.drink %></p>
+    <img class="drink-img" alt="img" src="<%= tweet.image %>" width="150" height="150"/>
+    <div class="content-text">
+    <p><%= tweet.name %></p>
+    <h1><%= link_to '詳細', tweet_path(tweet.id), method: :get %></h1>
+    </div>
+    </div>
+    <% end %>
+    </div>
+</div>
+
+  <div class="content">
+    <div class="title">
+    <p id="WHISKY">whisky</p>
+    <h1>ウィスキー</h1>
+    </div>
+  </div>
+    <div class="drinks">
+    <% @tweets.each do |tweet| %>
+    <% if tweet.base == "ウィスキー" %>
+    <%= render partial: "tweet", locals: { tweet: tweet} %>
+    <% end %>
+    <% end %>
+    </div>
+
+<div class="content">
+  <div class="title">
+  <p id="GIN">gin</p>
+  <h1>ジン</h1>
+  </div>
+</div>
+  <div class="drinks">
+  <% @tweets.each do |tweet| %>
+  <% if tweet.base == "ジン" %>
+  <%= render partial: "tweet", locals: { tweet: tweet} %>
+  <% end %>
+  <% end %>
+  </div>
+
+  <div class="content">
+    <div class="title">
+    <p id="RUM">rum</p>
+    <h1>ラム</h1>
+    </div>
+  </div>
+  <div class="drinks">
+    <% @tweets.each do |tweet| %>
+    <% if tweet.base == "ラム" %>
+    <%= render partial: "tweet", locals: { tweet: tweet} %>
+    <% end %>
+    <% end %>
+    </div>
+
+  <div class="content">
+    <div class="title">
+    <p id="VODKA">vodka</p>
+    <h1>ウォッカ</h1>
+    </div>
+  </div>
+  <div class="drinks">
+    <% @tweets.each do |tweet| %>
+    <% if tweet.base == "ウォッカ" %>
+    <%= render partial: "tweet", locals: { tweet: tweet} %>
+    <% end %>
+    <% end %>
+    </div>
+
+  <div class="content">
+    <div class="title">
+    <h1 id="その他">その他</h1>
+    </div>
+  </div>
+  <div class="drinks">
+    <% @tweets.each do |tweet| %>
+    <% if tweet.base == "その他" %>
+    <%= render partial: "tweet", locals: { tweet: tweet} %>
+    <% end %>
+    <% end %>
+    </div>
+</div>
+
+  <footer>
+  <div class="footer-tag">
+  <a href="#top">TOP</a>
+  <a href="#WHISKY">WHISKY</a>
+  <a href="#GIN">GIN</a>
+  <a href="#RUM">RUM</a>
+  <a href="#VODKA">VODKA</a>
+  <a href="#その他">その他</a>
+  <p>©︎ 2021 barppoitokoro</p>
+  </div>
+  </footer>
+  
+  

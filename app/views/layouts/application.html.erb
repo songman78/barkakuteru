@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Barkakuteru</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <img class="header_img" alt="bar" src="/img/画像/バー2.jpg" />
+ <a href="#"><img class="header-icon1" id ="top" alt="logo" src="/img/アイコン/ハンバーガー_negate.png" width="50px"/></a>
+ <p class="header-text">カクテル検索</p>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<div class="contents">
+  <div class="container">
+    <div class="title">
+    <h3>カクテルのレシピを投稿する</h3>
+    </div>
+  <div class="content">
+    <%= form_with(model: @tweet, local: true) do |form| %>
+      <%= form.text_field :base, placeholder: "ベースのお酒" %>
+      <%= form.text_field :name, placeholder: "投稿者" %>
+      <%= form.text_field :drink, placeholder: "お酒の名前" %>
+      <%= form.text_field :image, placeholder: "Image Url" %>
+      <%= form.text_area :text, placeholder: "レシピ", rows: "10" %>
+      <%= form.submit "投稿" %>
+    <% end %>
+  </div>
+  </div>
+</div>
