@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 機能
+<p>１：カクテルのレシピを調べる事ができす</p>
+<p>２：オリジナルのレシピの共有ができる</p>
 
-Things you may want to cover:
+<p>1:カクテルのベースになるお酒を選びます。その後該当のカクテルが見つかると詳細ページからレシピを確認できます。</p>
 
-* Ruby version
+<p>２:オリジナルのレシピを投稿することができます。投稿機能を実装することで、管理者だけのレシピではなく色々なレシピを見ることができカクテルの幅も広がっていくのではないかと考えました。</p>
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<a href="https://gyazo.com/6be20a262c47536b8d320387cad59403"><img src="https://i.gyazo.com/6be20a262c47536b8d320387cad59403.gif" alt="Image from Gyazo" width="1000"/></a>
